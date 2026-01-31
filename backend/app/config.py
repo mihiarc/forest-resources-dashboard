@@ -10,14 +10,8 @@ class Settings(BaseSettings):
     # Data file path - relative to project root
     data_file: Path = Path("data/USForestResources_2022_AppendixTables.xlsx")
 
-    # CORS settings
-    cors_origins: list[str] = [
-        "http://localhost:3000",
-        "http://127.0.0.1:3000",
-        "http://localhost:3001",
-        "http://127.0.0.1:3001",
-        "https://forest-resources-dashboard.netlify.app",
-    ]
+    # CORS settings - allow all origins for public API
+    cors_origins: list[str] = ["*"]
 
     class Config:
         env_prefix = "FOREST_"
