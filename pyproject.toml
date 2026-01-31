@@ -1,0 +1,19 @@
+[project]
+name = "forest-resources-report"
+version = "0.1.0"
+description = "U.S. Forest Resources Data Dashboard - FastAPI backend with Next.js frontend"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "pandas>=3.0.0",
+    "openpyxl>=3.1.5",
+    "pydantic>=2.9.0",
+    "pydantic-settings>=2.6.0",
+    "rich>=14.3.1",
+    "httpx>=0.28.1",
+]
+
+[project.scripts]
+start-backend = "uvicorn backend.app.main:app --reload"
