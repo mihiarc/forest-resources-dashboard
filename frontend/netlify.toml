@@ -1,0 +1,6 @@
+[build]
+  publish = "out"
+
+[[edge_functions]]
+  path = "/logout"
+  function = "logout"
