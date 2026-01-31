@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.fs.usda.gov)",
+      "Bash(uv run python:*)",
+      "Bash(uv init:*)",
+      "Bash(uv add:*)",
+      "Bash(timeout 10 uv run:*)",
+      "Bash(gtimeout:*)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(npm install:*)",
+      "Bash(uv sync)",
+      "Bash(git status:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nImplement Forest Resources Data Dashboard\n\nBuild a modern data dashboard for U.S. Forest Resources data \\(2022 Appendix Tables\\)\nwith FastAPI backend and Next.js frontend.\n\nBackend \\(FastAPI\\):\n- REST API with endpoints for land area, ownership, trends, timber, and dynamics data\n- Data loading service with caching for Excel data parsing\n- Pydantic v2 models for request/response validation\n- CORS configuration for frontend communication\n\nFrontend \\(Next.js 14\\):\n- App Router with TypeScript and Tailwind CSS\n- React Query for data fetching and caching\n- Interactive charts with Recharts \\(line, bar, pie charts\\)\n- US choropleth map with react-simple-maps\n- Filter sidebar for region/state filtering\n- Dashboard pages: Overview, Land Area, Ownership, Trends, Timber Volume, Dynamics\n\nData Coverage:\n- 48 Excel sheets with forest area, timber volume, ownership, growth/mortality trends\n- Historical data from 1630 to 2022\n- State, subregion, and region level aggregations\nEOF\n\\)\")",
+      "Bash(uv run:*)",
+      "Bash(curl:*)",
+      "Bash(npm run dev:*)",
+      "Bash(git commit:*)"
+    ]
+  }
+}

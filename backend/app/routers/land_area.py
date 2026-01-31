@@ -111,9 +111,9 @@ async def get_land_area_by_state(
 
     summaries = []
     for _, row in df.iterrows():
-        total_land = row["total_land_area"] or 0
-        total_forest = row["total_forest_land"] or 0
-        total_timber = row["total_timberland"] or 0
+        total_land = to_float_or_none(row["total_land_area"]) or 0
+        total_forest = to_float_or_none(row["total_forest_land"]) or 0
+        total_timber = to_float_or_none(row["total_timberland"]) or 0
         forest_percent = (total_forest / total_land * 100) if total_land > 0 else 0
 
         summaries.append(LandAreaSummary(
